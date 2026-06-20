@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ahmed Yasser | Backend Developer</title>
+<title>Ahmed Yasser | Backend Developer & Data Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -194,6 +194,7 @@ nav.scrolled{padding:12px 48px;}
   border-radius:4px;
   font-size:12px;
   margin-right:8px;
+  margin-bottom:8px;
   letter-spacing:.06em;
 }
 
@@ -433,6 +434,59 @@ nav.scrolled{padding:12px 48px;}
 .about-text p strong{
   color:var(--text);
   font-weight:600;
+}
+
+/* ─── GRADUATION PROJECT CARD ─── */
+.grad-project-card{
+  margin-top:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-left:3px solid var(--accent2);
+  border-radius:14px;
+  padding:24px 28px;
+  transition:border-color .25s,transform .25s;
+}
+
+.grad-project-card:hover{
+  border-color:var(--border2);
+  border-left-color:var(--accent2);
+  transform:translateY(-3px);
+}
+
+.grad-label{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent2);
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.grad-label::before{
+  content:'★';
+  font-size:10px;
+}
+
+.grad-title{
+  font-family:var(--serif);
+  font-size:20px;
+  color:var(--text);
+  margin-bottom:6px;
+}
+
+.grad-grade{
+  display:inline-block;
+  background:rgba(0,229,195,.12);
+  border:1px solid rgba(0,229,195,.3);
+  color:var(--accent2);
+  font-family:var(--mono);
+  font-size:11px;
+  padding:3px 10px;
+  border-radius:4px;
+  letter-spacing:.06em;
 }
 
 .about-stats{
@@ -678,7 +732,6 @@ nav.scrolled{padding:12px 48px;}
   border:1px solid var(--border);
   border-radius:14px;
   transition:all .25s;
-  group:true;
 }
 
 .contact-link:hover{
@@ -699,9 +752,7 @@ nav.scrolled{padding:12px 48px;}
   color:var(--accent);
 }
 
-.contact-link-text{
-  flex:1;
-}
+.contact-link-text{flex:1;}
 
 .contact-link-label{
   font-size:12px;
@@ -861,20 +912,21 @@ footer{
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-text">
-    <p class="hero-eyebrow"><span></span>Backend Developer</p>
+    <p class="hero-eyebrow"><span></span>Backend Developer & Data Engineer</p>
 
     <h1 class="hero-name">Ahmed<br><em>Yasser</em></h1>
 
     <div class="hero-role">
-      <span class="role-tag">ASP.NET Core</span>
-      <span class="role-tag">Microservices</span>
+      <span class="role-tag">ASP.NET</span>
       <span class="role-tag">Spring Boot</span>
+      <span class="role-tag">Django</span>
+      <span class="role-tag">Data Warehousing</span>
     </div>
 
     <p class="hero-bio">
-      Computer Science student crafting scalable backend systems, clean REST APIs,
-      and modern software architectures. Passionate about solving complex problems
-      with elegant, performant solutions.
+      Computer Science graduate crafting scalable backend systems, clean REST APIs,
+      and modern software architectures — with a strong data engineering side.
+      Passionate about solving complex problems with elegant, performant solutions.
     </p>
 
     <div class="hero-actions">
@@ -904,7 +956,7 @@ footer{
         <div class="badge-dot"></div>
         <div class="badge-text">
           Open to opportunities
-          <small>Backend / API Development</small>
+          <small>Backend / Data Engineering</small>
         </div>
       </div>
     </div>
@@ -929,19 +981,28 @@ footer{
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I'm a Computer Science student with a deep interest in backend architecture —
-          the part of the stack that makes or breaks a product. I design systems for
+          I'm a Computer Science graduate from Cairo University (FCAI) with a deep interest in
+          backend architecture and data engineering — the parts of the stack that make or break
+          a product. I design systems for
           <strong>reliability, performance, and maintainability</strong>, not just to get things working.
         </p>
         <p>
-          My toolkit spans <strong>ASP.NET Core, Spring Boot, and Django</strong>, and I'm comfortable
-          working across relational databases, ETL pipelines, and distributed microservices.
-          I care deeply about clean code and well-designed APIs.
+          My toolkit spans <strong>ASP.NET, Spring Boot, and Django</strong> on the backend, and extends
+          into data with <strong>SQL Server, SSIS, ETL pipelines, and dimensional modelling</strong>.
+          I'm equally comfortable designing a microservice as I am building a data warehouse.
         </p>
         <p>
           Beyond the code, I'm a structured thinker who asks "why" before "how" — which
           means the systems I build tend to solve the right problems.
         </p>
+
+        <div class="grad-project-card">
+          <div class="grad-label">Graduation Project</div>
+          <div class="grad-title">Planto — Smart Irrigation System</div>
+          <div style="margin-top:8px;">
+            <span class="grad-grade">Grade: A+</span>
+          </div>
+        </div>
       </div>
 
       <div class="about-stats reveal">
@@ -950,8 +1011,8 @@ footer{
           <div class="stat-label">Projects shipped</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Backend frameworks</div>
+          <div class="stat-num">3.48</div>
+          <div class="stat-label">Cumulative GPA</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">ML</div>
@@ -978,13 +1039,13 @@ footer{
 
     <div class="skills-categories reveal">
       <div class="skill-group">
-        <h4>Backend</h4>
+        <h4>Backend & Frameworks</h4>
         <div class="skill-tags">
-          <span class="skill-tag"><span class="skill-dot"></span>ASP.NET Core</span>
+          <span class="skill-tag"><span class="skill-dot"></span>ASP.NET</span>
           <span class="skill-tag"><span class="skill-dot"></span>Spring Boot</span>
           <span class="skill-tag"><span class="skill-dot"></span>Django</span>
           <span class="skill-tag"><span class="skill-dot"></span>REST APIs</span>
-          <span class="skill-tag"><span class="skill-dot"></span>Microservices</span>
+          <span class="skill-tag"><span class="skill-dot"></span>Microservices / SOA</span>
         </div>
       </div>
 
@@ -995,17 +1056,40 @@ footer{
           <span class="skill-tag"><span class="skill-dot"></span>Java</span>
           <span class="skill-tag"><span class="skill-dot"></span>Python</span>
           <span class="skill-tag"><span class="skill-dot"></span>SQL</span>
+          <span class="skill-tag"><span class="skill-dot"></span>HTML / CSS / JS</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <h4>Data & Tools</h4>
+        <h4>Data & BI</h4>
         <div class="skill-tags">
           <span class="skill-tag"><span class="skill-dot"></span>SQL Server</span>
           <span class="skill-tag"><span class="skill-dot"></span>MySQL</span>
           <span class="skill-tag"><span class="skill-dot"></span>SSIS / ETL</span>
           <span class="skill-tag"><span class="skill-dot"></span>Data Warehousing</span>
+          <span class="skill-tag"><span class="skill-dot"></span>Power BI</span>
+          <span class="skill-tag"><span class="skill-dot"></span>Pandas / NumPy</span>
+          <span class="skill-tag"><span class="skill-dot"></span>Dimensional Modeling</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Engineering Practices</h4>
+        <div class="skill-tags">
+          <span class="skill-tag"><span class="skill-dot"></span>OOP</span>
+          <span class="skill-tag"><span class="skill-dot"></span>Design Patterns</span>
+          <span class="skill-tag"><span class="skill-dot"></span>LINQ</span>
           <span class="skill-tag"><span class="skill-dot"></span>Git / GitHub</span>
+          <span class="skill-tag"><span class="skill-dot"></span>RBAC</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Machine Learning</h4>
+        <div class="skill-tags">
+          <span class="skill-tag"><span class="skill-dot"></span>Computer Vision</span>
+          <span class="skill-tag"><span class="skill-dot"></span>Image Classification</span>
+          <span class="skill-tag"><span class="skill-dot"></span>Python ML Workflows</span>
         </div>
       </div>
     </div>
@@ -1026,17 +1110,18 @@ footer{
 
       <a href="https://github.com/ahmedyasser28" target="_blank" class="project-item reveal">
         <div>
-          <div class="project-number">01</div>
+          <div class="project-number">01 · Jan 2026</div>
           <h3 class="project-title">SOA Ecommerce System</h3>
           <p class="project-desc">
             A fully distributed ecommerce backend following Service-Oriented Architecture principles.
-            Independently deployable services communicating via well-defined contracts, built to handle scale from day one.
+            Independently deployable services communicate via well-defined RESTful contracts,
+            built with scalability, maintainability, and modularity in mind from day one.
           </p>
           <div class="project-tech">
-            <span class="tech-badge">ASP.NET Core</span>
-            <span class="tech-badge">Microservices</span>
+            <span class="tech-badge">.NET</span>
+            <span class="tech-badge">MySQL</span>
             <span class="tech-badge">REST APIs</span>
-            <span class="tech-badge">SQL Server</span>
+            <span class="tech-badge">SOA</span>
           </div>
         </div>
         <div class="project-arrow">→</div>
@@ -1044,16 +1129,18 @@ footer{
 
       <a href="https://github.com/ahmedyasser28" target="_blank" class="project-item reveal">
         <div>
-          <div class="project-number">02</div>
+          <div class="project-number">02 · Feb 2026</div>
           <h3 class="project-title">Materials Identifier ML</h3>
           <p class="project-desc">
-            Automated waste classification system using computer vision. Trains and serves a model
-            capable of identifying material types from images — a practical application of ML for sustainability.
+            Automated waste classification system using computer vision and machine learning.
+            Trained and evaluated image classification models to identify material types from images —
+            a practical application of ML for improving sustainability and waste sorting.
           </p>
           <div class="project-tech">
             <span class="tech-badge">Python</span>
             <span class="tech-badge">Computer Vision</span>
             <span class="tech-badge">Machine Learning</span>
+            <span class="tech-badge">Image Classification</span>
           </div>
         </div>
         <div class="project-arrow">→</div>
@@ -1061,16 +1148,18 @@ footer{
 
       <a href="https://github.com/ahmedyasser28" target="_blank" class="project-item reveal">
         <div>
-          <div class="project-number">03</div>
-          <h3 class="project-title">Library Management System</h3>
+          <div class="project-number">03 · Nov 2024</div>
+          <h3 class="project-title">Learning Management System</h3>
           <p class="project-desc">
-            Full-featured LMS built on Spring Boot and MySQL with role-based access control, 
-            real-time notifications, and a clean service layer — designed for production reliability.
+            Full-featured LMS built in a 4-person team on Spring Boot and MySQL.
+            Includes course management, quizzes, performance tracking, and role-based access control
+            for Admin, Instructor, and Student roles — designed for production reliability.
           </p>
           <div class="project-tech">
             <span class="tech-badge">Spring Boot</span>
-            <span class="tech-badge">MySQL</span>
             <span class="tech-badge">Java</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">REST APIs</span>
             <span class="tech-badge">RBAC</span>
           </div>
         </div>
@@ -1079,16 +1168,18 @@ footer{
 
       <a href="https://github.com/ahmedyasser28" target="_blank" class="project-item reveal">
         <div>
-          <div class="project-number">04</div>
-          <h3 class="project-title">Online Library Website</h3>
+          <div class="project-number">04 · May 2025</div>
+          <h3 class="project-title">Library Data Warehouse</h3>
           <p class="project-desc">
-            A Django full-stack application with dynamic book management, user authentication,
-            and interactive reading lists. Clean MVC structure with a focus on developer experience.
+            End-to-end data warehousing implementation with a dimensional model and ETL pipelines
+            to extract, transform, and load data from an OLTP source. SSIS packages automate
+            data integration workflows, delivering analytics-ready structures on SQL Server.
           </p>
           <div class="project-tech">
-            <span class="tech-badge">Django</span>
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Full-stack</span>
+            <span class="tech-badge">SQL Server</span>
+            <span class="tech-badge">SSIS</span>
+            <span class="tech-badge">ETL</span>
+            <span class="tech-badge">Dimensional Modeling</span>
           </div>
         </div>
         <div class="project-arrow">→</div>
@@ -1096,17 +1187,18 @@ footer{
 
       <a href="https://github.com/ahmedyasser28" target="_blank" class="project-item reveal">
         <div>
-          <div class="project-number">05</div>
-          <h3 class="project-title">Data Warehouse Project</h3>
+          <div class="project-number">05 · May 2024</div>
+          <h3 class="project-title">Online Library Website</h3>
           <p class="project-desc">
-            End-to-end data warehousing implementation with ETL pipelines, dimensional modeling,
-            and SSIS orchestration — enabling analytics-ready data structures on top of SQL Server.
+            Full-stack Django application built in a 5-person team with dynamic book management,
+            search, borrowing features, and role-based access control.
+            Clean MVC structure integrating backend and frontend with proper validation and database management.
           </p>
           <div class="project-tech">
-            <span class="tech-badge">SQL Server</span>
-            <span class="tech-badge">SSIS</span>
-            <span class="tech-badge">ETL</span>
-            <span class="tech-badge">Dimensional Modeling</span>
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">HTML / CSS / JS</span>
+            <span class="tech-badge">Full-stack</span>
           </div>
         </div>
         <div class="project-arrow">→</div>
@@ -1126,7 +1218,7 @@ footer{
         <p class="section-label">Let's connect</p>
         <h2 class="contact-headline">Got a role<br>in <em>mind?</em></h2>
         <p class="contact-sub">
-          I'm actively looking for backend development opportunities.
+          I'm actively looking for backend and data engineering opportunities.
           Whether you have a role, a project, or just want to talk architecture —
           I'd love to hear from you.
         </p>
@@ -1189,8 +1281,8 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-copy">© 2026 Ahmed Yasser <span class="footer-dot">·</span> Backend Developer</p>
-  <p class="footer-copy" style="color:var(--border2);">Cairo, Egypt</p>
+  <p class="footer-copy">© 2026 Ahmed Yasser <span class="footer-dot">·</span> Backend Developer & Data Engineer</p>
+  <p class="footer-copy" style="color:var(--border2);">Giza, Egypt</p>
 </footer>
 
 <script>
